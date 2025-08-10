@@ -1,4 +1,4 @@
-from debian:13
+from debian:trixie
 
 run apt-get update && \
     apt-get install -y wget
