@@ -1,4 +1,4 @@
-from debian:trixie
+FROM makedie/proxmox_ve:debian-trixie-20250721-amd64
 
 run apt-get update && \
     apt-get install -y wget
