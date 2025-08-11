@@ -3,9 +3,21 @@ from debian:trixie
 run apt-get update && \
     apt-get install -y wget
 # 增加Proxmox 的源文件
-run echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
+run cat > /etc/apt/sources.list.d/pve-no-subscription.sources <<EOF
+Types: deb
+URIs: https://mirrors.ustc.edu.cn/proxmox/debian/pve
+Suites: trixie
+Components: pve-no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
 # 增加 ceph 源文件 换源
-run echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/ceph-squid trixie no-subscription" > /etc/apt/sources.list.d/ceph.list
+run cat > /etc/apt/sources.list.d/ceph.sources <<EOF
+Types: deb
+URIs: https://mirrors.ustc.edu.cn/proxmox/debian/ceph-$CEPH_CODENAME
+Suites: trixie
+Components: no-subscription
+Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
+EOF
 run wget -O /etc/apt/trusted.gpg.d/proxmox-release-trixie.gpg "https://enterprise.proxmox.com/debian/proxmox-release-trixie.gpg"
 
 run apt-get update && apt-get dist-upgrade -y
