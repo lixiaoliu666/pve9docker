@@ -2,6 +2,7 @@ from debian:trixie
 
 run apt-get update && \
     apt-get install -y wget
+run apt-get dist-upgrade -y
 # 增加Proxmox 的源文件
 run echo "deb https://mirrors.ustc.edu.cn/proxmox/debian/pve trixie pve-no-subscription" > /etc/apt/sources.list.d/pve-no-subscription.list
 # 增加 ceph 源文件 换源
