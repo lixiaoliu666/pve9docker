@@ -1,4 +1,4 @@
-FROM pythonpillow/debian-13-trixie-amd64
+FROM pythonpillow/debian-13-trixie-amd64:main
 
 run apt-get update && \
     apt-get install -y wget git
