@@ -1,4 +1,4 @@
-FROM debian:trixie-20250721
+from debian:trixie-20250721
 
 run apt-get update && \
     apt-get install -y wget git
@@ -37,7 +37,8 @@ run apt-get install -y devscripts autotools-dev autogen dh-autoreconf dkms doxyg
             libiscsi7 librsvg2-bin libarchive-dev libgpgme-dev libcurl4-gnutls-dev \
             libtest-mockmodule-perl libjemalloc-dev libjpeg-dev
             
-RUN apt-get install -y proxmox-default-kernel
+run apt-get install -y proxmox-default-kernel
+run apt remove -y linux-image-amd64 'linux-image-6.11*'
 
 run apt-get install -y docutils-common fonts-font-awesome libacl1-dev libattr1-dev libcap-ng-dev \
             libcap2-bin libegl-dev libepoxy-dev libfdt-dev libfdt1 libgbm-dev \
