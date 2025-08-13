@@ -57,4 +57,5 @@ run apt-get install -y frr frr-pythontools libbytes-random-secure-perl libcephfs
 
 run apt-get install -y libbabeltrace1 libcfg7 libcmap4 libcompel1 libcpg4:amd64 libevent-core-2.1-7t64 libfile-readbackwards-perl libfuse2t64 libgoogle-perftools4t64 libipset13t64 libknet1t64 liblinear4 libnfsidmap1 libnozzle1t64 libnvpair3linux liboath0t64 libqb100 libquorum5 librdkafka1 librrd8t64 librrds-perl libstatgrab10t64 libtcmalloc-minimal4t64 libthrift-0.19.0t64 libtlsrpt0 libtpms0 libvotequorum8 libyang3 libzfs6linux libzpool6linux swtpm-libs
 
+run rm /etc/apt/sources.list.d/pve-enterprise.sources
 #run apt-get install -y dpatch dh-systemd pve-libspice-server-dev iproute python-ceph libreadline-gplv2-dev libipset3 python-pyparsing ttf-dejavu-core
