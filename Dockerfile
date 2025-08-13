@@ -41,7 +41,7 @@ RUN apt-get install -y proxmox-default-kernel
 
 run apt-get install -y docutils-common fonts-font-awesome libacl1-dev libattr1-dev libcap-ng-dev \
             libcap2-bin libegl-dev libepoxy-dev libfdt-dev libfdt1 libgbm-dev \
-            libglusterfs-dev libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 \
+            libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 \
             libjs-sphinxdoc libjs-underscore liborc-0.4-0 libpixman-1-dev \
             libproxmox-backup-qemu0 libproxmox-backup-qemu0-dev libslirp-dev libslirp0 \
             libspice-server-dev libspice-server1 liburing-dev liburing2 libva-drm2 \
