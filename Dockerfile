@@ -55,6 +55,6 @@ run apt-get install -y docutils-common fonts-font-awesome libacl1-dev libattr1-d
 
 run git config --global url."https://github.com/tianocore/edk2-subhook.git".insteadOf https://github.com/Zeex/subhook.git
 
-run rm /etc/apt/sources.list.d/pve-enterprise.sources
+#run rm /etc/apt/sources.list.d/pve-enterprise.sources
 
 
